@@ -16,8 +16,8 @@ const Home: NextPage = ({title}:InferGetServerSidePropsType<typeof getServerSide
   return (
     <div className={styles.container}>
       <Head>
-        <title>Hello Mate! {title} </title>
-        <meta property="og:image" content={`https://exp-admin.nostradome.com/public/image/nostradome.prediction/139/prediction_image/api/og?title=${title}`} />
+        <title>Hello There! {title} </title>
+        <meta property="og:image" content={`https://next-dynamic-og-image.vercel.app/api/og?title=${title}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
