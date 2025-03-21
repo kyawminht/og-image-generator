@@ -23,15 +23,15 @@ const  OgImageHandler = async (req: NextRequest)=> {
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundImage: 'url(https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg)', // Set the background image
-        backgroundSize: 'cover', // Ensure the image covers the entire div
+        backgroundImage: 'url(https://exp.nostradome.com/misc/nostragem.png)', // Set the background image
+        backgroundSize: 'contain', // Ensure the image covers the entire div
         backgroundPosition: 'center', // Center the image
         color: 'blue', // Set text color to contrast with the background
         textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)', // Add shadow to text for better readability
         backgroundRepeat:'no-repeat'
       }}
     >
-      Hello there! {title}
+     
     </div>
   ),
   {
