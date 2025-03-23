@@ -1,18 +1,18 @@
-import type { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
-import styles from '../styles/Home.module.css'
+import type { GetServerSideProps, InferGetServerSidePropsType, NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import styles from '../styles/Home.module.css';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
-    props:{
-      title: context.query?.title??'Mate'
-    }
-  }
-}
-const Home: NextPage = ({title}:InferGetServerSidePropsType<typeof getServerSideProps>) => {
+    props: {
+      title: context.query?.title ?? 'Mate',
+    },
+  };
+};
 
+const Home: NextPage = ({ title }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const ogImageUrl = `https://next-dynamic-og-image.vercel.app/api/og?title=${title}`;
 
   return (
@@ -25,10 +25,12 @@ const Home: NextPage = ({title}:InferGetServerSidePropsType<typeof getServerSide
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="600" />
         <meta property="og:type" content="website" />
+        <meta property="og:description" content="Welcome to our Next.js application!" />
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`Hello There! ${title}`} />
+        <meta name="twitter:description" content="Welcome to our Next.js application!" />
         <meta name="twitter:image" content={ogImageUrl} />
       </Head>
 
@@ -86,7 +88,7 @@ const Home: NextPage = ({title}:InferGetServerSidePropsType<typeof getServerSide
         </a>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
