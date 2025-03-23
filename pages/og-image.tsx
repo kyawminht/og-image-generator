@@ -13,12 +13,25 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
 }
 const Home: NextPage = ({title}:InferGetServerSidePropsType<typeof getServerSideProps>) => {
 
+  const ogImageUrl = `https://next-dynamic-og-image.vercel.app/api/og?title=${title}`;
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>Hello There! {title} </title>
-        <meta property="og:image" content={`https://next-dynamic-og-image.vercel.app/api/og?title=${title}`} />
-        <link rel="icon" href="/favicon.ico" />
+        {/* Open Graph (OG) Tags */}
+        <title>Hello There! {title}</title>
+        <meta property="og:title" content={`Hello There! ${title}`} />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="600" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`Hello There! ${title}`} />
+        <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="twitter:image:width" content="1200" />
+        <meta name="twitter:image:height" content="600" />
       </Head>
 
       <main className={styles.main}>
