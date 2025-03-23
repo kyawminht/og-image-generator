@@ -30,8 +30,6 @@ const Home: NextPage = ({title}:InferGetServerSidePropsType<typeof getServerSide
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`Hello There! ${title}`} />
         <meta name="twitter:image" content={ogImageUrl} />
-        <meta name="twitter:image:width" content="1200" />
-        <meta name="twitter:image:height" content="600" />
       </Head>
 
       <main className={styles.main}>
