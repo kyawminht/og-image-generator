@@ -32,6 +32,7 @@ const Home: NextPage = ({ title }: InferGetServerSidePropsType<typeof getServerS
         <meta name="twitter:title" content={`Hello There! ${title}`} />
         <meta name="twitter:description" content="Welcome to our Next.js application!" />
         <meta name="twitter:image" content={ogImageUrl} />
+        <meta name="twitter:url" content="https://next-dynamic-og-image.vercel.app/api/og?title=${title}" />
       </Head>
 
       <main className={styles.main}>
