@@ -18,23 +18,9 @@ const Home: NextPage = ({ title }: InferGetServerSidePropsType<typeof getServerS
   return (
     <div className={styles.container}>
       <Head>
-        {/* Open Graph (OG) Tags */}
-        <title>Hello There! {title}</title>
-        <meta property="og:title" content={`Hello There! ${title}`} />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="600" />
-        <meta property="og:type" content="website" />
-        <meta property="og:description" content="Welcome to our Next.js application!" />
-
-        {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="hello" />
-        <meta name="twitter:domain" content="www.udemy.com"></meta>
-        <meta name="twitter:description" content="Welcome to our Next.js application!" />
-        <meta name="twitter:image" content="https://s.udemycdn.com/meta/default-meta-image-v2.png" />
-        <meta name="twitter:site" content="@udemy"></meta>
-       
+      <title>Hello There! {title} </title>
+        <meta property="og:image" content={`https://next-dynamic-og-image.vercel.app/api/og?title=${title}`} />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
