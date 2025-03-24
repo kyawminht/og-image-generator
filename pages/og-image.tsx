@@ -31,8 +31,10 @@ const Home: NextPage = ({ title }: InferGetServerSidePropsType<typeof getServerS
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`Hello There! ${title}`} />
         <meta name="twitter:description" content="Welcome to our Next.js application!" />
-        <meta name="twitter:image" content={ogImageUrl} />
-        <meta name="twitter:url" content="https://next-dynamic-og-image.vercel.app/api/og?title=${title}" />
+        <meta name="twitter:image" content="https://s.udemycdn.com/meta/default-meta-image-v2.png" />
+        <meta name="twitter:site" content="@udemy"></meta>
+        <meta itemprop="name" content="Online Courses - Learn Anything, On Your Schedule | Udemy"></meta>
+        <meta itemprop="image" content="https://s.udemycdn.com/meta/default-meta-image-v2.png"></meta>
       </Head>
 
       <main className={styles.main}>
