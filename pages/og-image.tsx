@@ -19,6 +19,11 @@ const Home: NextPage = ({ title }: InferGetServerSidePropsType<typeof getServerS
     <div className={styles.container}>
       <Head>
       <title>Hello There! {title} </title>
+        <meta property="og:title" content="og (1200×600)"></meta>
+        <meta property="og:image" content="https://og-image-generator-sigma-eight.vercel.app/api/og?title=kyaw"></meta>
+        <meta property="og:image:width" content="1200"></meta>
+        <meta property="og:image:height" content="600"></meta>
+        <meta property="og:type" content="website"></meta>
         <meta property="og:image" content={`https://next-dynamic-og-image.vercel.app/api/og?title=${title}`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
