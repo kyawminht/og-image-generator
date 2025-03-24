@@ -29,12 +29,12 @@ const Home: NextPage = ({ title }: InferGetServerSidePropsType<typeof getServerS
 
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`Hello There! ${title}`} />
+        <meta name="twitter:title" content="hello" />
+        <meta name="twitter:domain" content="www.udemy.com"></meta>
         <meta name="twitter:description" content="Welcome to our Next.js application!" />
         <meta name="twitter:image" content="https://s.udemycdn.com/meta/default-meta-image-v2.png" />
         <meta name="twitter:site" content="@udemy"></meta>
-        <meta itemprop="name" content="Online Courses - Learn Anything, On Your Schedule | Udemy"></meta>
-        <meta itemprop="image" content="https://s.udemycdn.com/meta/default-meta-image-v2.png"></meta>
+       
       </Head>
 
       <main className={styles.main}>
